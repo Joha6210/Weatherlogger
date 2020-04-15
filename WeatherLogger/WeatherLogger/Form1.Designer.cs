@@ -36,9 +36,11 @@
             this.comboBox_Baudrate = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_SerialPort = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBoxUpData = new System.Windows.Forms.CheckBox();
-            this.textBox_HttpUrl = new System.Windows.Forms.TextBox();
+            this.groupBox_database = new System.Windows.Forms.GroupBox();
+            this.textBox_tableName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkBox_UpData1 = new System.Windows.Forms.CheckBox();
+            this.textBox_ServerName = new System.Windows.Forms.TextBox();
             this.textBox_Database = new System.Windows.Forms.TextBox();
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.textBox_Username = new System.Windows.Forms.TextBox();
@@ -53,9 +55,20 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox_Logging = new System.Windows.Forms.CheckBox();
             this.button_Clear = new System.Windows.Forms.Button();
+            this.comboBox_ConnType = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox_http = new System.Windows.Forms.GroupBox();
+            this.checkBox_UpData2 = new System.Windows.Forms.CheckBox();
+            this.textBox_URL = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox_database.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox_http.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -138,44 +151,63 @@
             this.comboBox_SerialPort.TabIndex = 1;
             this.comboBox_SerialPort.SelectedIndexChanged += new System.EventHandler(this.comboBox_SerialPort_SelectedIndexChanged);
             // 
-            // groupBox2
+            // groupBox_database
             // 
-            this.groupBox2.Controls.Add(this.checkBoxUpData);
-            this.groupBox2.Controls.Add(this.textBox_HttpUrl);
-            this.groupBox2.Controls.Add(this.textBox_Database);
-            this.groupBox2.Controls.Add(this.textBox_Password);
-            this.groupBox2.Controls.Add(this.textBox_Username);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.labelDBStatus);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.buttonDBConnect);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(12, 193);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(222, 245);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Database Connection";
+            this.groupBox_database.Controls.Add(this.textBox_tableName);
+            this.groupBox_database.Controls.Add(this.label10);
+            this.groupBox_database.Controls.Add(this.checkBox_UpData1);
+            this.groupBox_database.Controls.Add(this.textBox_ServerName);
+            this.groupBox_database.Controls.Add(this.textBox_Database);
+            this.groupBox_database.Controls.Add(this.textBox_Password);
+            this.groupBox_database.Controls.Add(this.textBox_Username);
+            this.groupBox_database.Controls.Add(this.label9);
+            this.groupBox_database.Controls.Add(this.label8);
+            this.groupBox_database.Controls.Add(this.labelDBStatus);
+            this.groupBox_database.Controls.Add(this.label5);
+            this.groupBox_database.Controls.Add(this.buttonDBConnect);
+            this.groupBox_database.Controls.Add(this.label6);
+            this.groupBox_database.Controls.Add(this.label7);
+            this.groupBox_database.Location = new System.Drawing.Point(13, 249);
+            this.groupBox_database.Name = "groupBox_database";
+            this.groupBox_database.Size = new System.Drawing.Size(222, 289);
+            this.groupBox_database.TabIndex = 8;
+            this.groupBox_database.TabStop = false;
+            this.groupBox_database.Text = "Database Connection";
+            this.groupBox_database.Visible = false;
             // 
-            // checkBoxUpData
+            // textBox_tableName
             // 
-            this.checkBoxUpData.AutoSize = true;
-            this.checkBoxUpData.Location = new System.Drawing.Point(122, 225);
-            this.checkBoxUpData.Name = "checkBoxUpData";
-            this.checkBoxUpData.Size = new System.Drawing.Size(86, 17);
-            this.checkBoxUpData.TabIndex = 14;
-            this.checkBoxUpData.Text = "Upload Data";
-            this.checkBoxUpData.UseVisualStyleBackColor = true;
+            this.textBox_tableName.Location = new System.Drawing.Point(6, 208);
+            this.textBox_tableName.Name = "textBox_tableName";
+            this.textBox_tableName.Size = new System.Drawing.Size(210, 20);
+            this.textBox_tableName.TabIndex = 16;
             // 
-            // textBox_HttpUrl
+            // label10
             // 
-            this.textBox_HttpUrl.Location = new System.Drawing.Point(6, 39);
-            this.textBox_HttpUrl.Name = "textBox_HttpUrl";
-            this.textBox_HttpUrl.Size = new System.Drawing.Size(210, 20);
-            this.textBox_HttpUrl.TabIndex = 13;
-            this.textBox_HttpUrl.Text = "http://www.projectweather.one/postrequest.php";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 192);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 13);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Tabel name:";
+            // 
+            // checkBox_UpData1
+            // 
+            this.checkBox_UpData1.AutoSize = true;
+            this.checkBox_UpData1.Location = new System.Drawing.Point(122, 260);
+            this.checkBox_UpData1.Name = "checkBox_UpData1";
+            this.checkBox_UpData1.Size = new System.Drawing.Size(86, 17);
+            this.checkBox_UpData1.TabIndex = 14;
+            this.checkBox_UpData1.Text = "Upload Data";
+            this.checkBox_UpData1.UseVisualStyleBackColor = true;
+            this.checkBox_UpData1.CheckedChanged += new System.EventHandler(this.CheckUpDateChanged);
+            // 
+            // textBox_ServerName
+            // 
+            this.textBox_ServerName.Location = new System.Drawing.Point(6, 39);
+            this.textBox_ServerName.Name = "textBox_ServerName";
+            this.textBox_ServerName.Size = new System.Drawing.Size(210, 20);
+            this.textBox_ServerName.TabIndex = 13;
             // 
             // textBox_Database
             // 
@@ -183,7 +215,6 @@
             this.textBox_Database.Name = "textBox_Database";
             this.textBox_Database.Size = new System.Drawing.Size(210, 20);
             this.textBox_Database.TabIndex = 12;
-            this.textBox_Database.Text = "projectweather_oneweatherdata";
             // 
             // textBox_Password
             // 
@@ -191,7 +222,6 @@
             this.textBox_Password.Name = "textBox_Password";
             this.textBox_Password.Size = new System.Drawing.Size(210, 20);
             this.textBox_Password.TabIndex = 11;
-            this.textBox_Password.Text = "X0y7*rm1R";
             // 
             // textBox_Username
             // 
@@ -199,7 +229,6 @@
             this.textBox_Username.Name = "textBox_Username";
             this.textBox_Username.Size = new System.Drawing.Size(210, 20);
             this.textBox_Username.TabIndex = 10;
-            this.textBox_Username.Text = "projectweather_oneweatherdata";
             // 
             // label9
             // 
@@ -222,7 +251,7 @@
             // labelDBStatus
             // 
             this.labelDBStatus.AutoSize = true;
-            this.labelDBStatus.Location = new System.Drawing.Point(43, 225);
+            this.labelDBStatus.Location = new System.Drawing.Point(43, 260);
             this.labelDBStatus.Name = "labelDBStatus";
             this.labelDBStatus.Size = new System.Drawing.Size(73, 13);
             this.labelDBStatus.TabIndex = 7;
@@ -231,7 +260,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 225);
+            this.label5.Location = new System.Drawing.Point(6, 260);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 6;
@@ -239,7 +268,7 @@
             // 
             // buttonDBConnect
             // 
-            this.buttonDBConnect.Location = new System.Drawing.Point(6, 199);
+            this.buttonDBConnect.Location = new System.Drawing.Point(6, 234);
             this.buttonDBConnect.Name = "buttonDBConnect";
             this.buttonDBConnect.Size = new System.Drawing.Size(210, 23);
             this.buttonDBConnect.TabIndex = 5;
@@ -261,16 +290,16 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 13);
+            this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Url:";
+            this.label7.Text = "Servername: ";
             // 
             // listBox_data
             // 
             this.listBox_data.FormattingEnabled = true;
             this.listBox_data.Location = new System.Drawing.Point(6, 19);
             this.listBox_data.Name = "listBox_data";
-            this.listBox_data.Size = new System.Drawing.Size(515, 368);
+            this.listBox_data.Size = new System.Drawing.Size(515, 433);
             this.listBox_data.TabIndex = 9;
             // 
             // groupBox3
@@ -280,7 +309,7 @@
             this.groupBox3.Controls.Add(this.listBox_data);
             this.groupBox3.Location = new System.Drawing.Point(241, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(527, 425);
+            this.groupBox3.Size = new System.Drawing.Size(527, 490);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Console";
@@ -288,7 +317,9 @@
             // checkBox_Logging
             // 
             this.checkBox_Logging.AutoSize = true;
-            this.checkBox_Logging.Location = new System.Drawing.Point(97, 397);
+            this.checkBox_Logging.Checked = true;
+            this.checkBox_Logging.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_Logging.Location = new System.Drawing.Point(97, 465);
             this.checkBox_Logging.Name = "checkBox_Logging";
             this.checkBox_Logging.Size = new System.Drawing.Size(100, 17);
             this.checkBox_Logging.TabIndex = 11;
@@ -298,7 +329,7 @@
             // 
             // button_Clear
             // 
-            this.button_Clear.Location = new System.Drawing.Point(6, 393);
+            this.button_Clear.Location = new System.Drawing.Point(6, 461);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(85, 23);
             this.button_Clear.TabIndex = 10;
@@ -306,12 +337,104 @@
             this.button_Clear.UseVisualStyleBackColor = true;
             this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
             // 
+            // comboBox_ConnType
+            // 
+            this.comboBox_ConnType.FormattingEnabled = true;
+            this.comboBox_ConnType.Location = new System.Drawing.Point(94, 17);
+            this.comboBox_ConnType.Name = "comboBox_ConnType";
+            this.comboBox_ConnType.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_ConnType.TabIndex = 11;
+            this.comboBox_ConnType.SelectedIndexChanged += new System.EventHandler(this.comboBox_ConnType_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Type:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.comboBox_ConnType);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Location = new System.Drawing.Point(13, 193);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(221, 50);
+            this.groupBox4.TabIndex = 12;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Connection Type";
+            // 
+            // groupBox_http
+            // 
+            this.groupBox_http.Controls.Add(this.checkBox_UpData2);
+            this.groupBox_http.Controls.Add(this.textBox_URL);
+            this.groupBox_http.Controls.Add(this.label14);
+            this.groupBox_http.Controls.Add(this.label15);
+            this.groupBox_http.Controls.Add(this.label17);
+            this.groupBox_http.Location = new System.Drawing.Point(12, 249);
+            this.groupBox_http.Name = "groupBox_http";
+            this.groupBox_http.Size = new System.Drawing.Size(222, 97);
+            this.groupBox_http.TabIndex = 17;
+            this.groupBox_http.TabStop = false;
+            this.groupBox_http.Text = "Http Connection";
+            this.groupBox_http.Visible = false;
+            // 
+            // checkBox_UpData2
+            // 
+            this.checkBox_UpData2.AutoSize = true;
+            this.checkBox_UpData2.Location = new System.Drawing.Point(122, 65);
+            this.checkBox_UpData2.Name = "checkBox_UpData2";
+            this.checkBox_UpData2.Size = new System.Drawing.Size(86, 17);
+            this.checkBox_UpData2.TabIndex = 14;
+            this.checkBox_UpData2.Text = "Upload Data";
+            this.checkBox_UpData2.UseVisualStyleBackColor = true;
+            this.checkBox_UpData2.CheckedChanged += new System.EventHandler(this.CheckUpDateChanged);
+            // 
+            // textBox_URL
+            // 
+            this.textBox_URL.Location = new System.Drawing.Point(6, 39);
+            this.textBox_URL.Name = "textBox_URL";
+            this.textBox_URL.Size = new System.Drawing.Size(210, 20);
+            this.textBox_URL.TabIndex = 13;
+            this.textBox_URL.Text = "http://www.projectweather.one/postrequest.php";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(43, 66);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Disconnected";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 66);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(40, 13);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Status:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 23);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 13);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "URL:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 450);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(780, 550);
+            this.Controls.Add(this.groupBox_http);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox_database);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Name = "Form1";
@@ -319,10 +442,14 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox_database.ResumeLayout(false);
+            this.groupBox_database.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox_http.ResumeLayout(false);
+            this.groupBox_http.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -337,7 +464,7 @@
         private System.Windows.Forms.Label label_Status;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_Click;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox_database;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelDBStatus;
@@ -345,15 +472,26 @@
         private System.Windows.Forms.Button buttonDBConnect;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox_HttpUrl;
+        private System.Windows.Forms.TextBox textBox_ServerName;
         private System.Windows.Forms.TextBox textBox_Database;
         private System.Windows.Forms.TextBox textBox_Password;
         private System.Windows.Forms.TextBox textBox_Username;
         private System.Windows.Forms.ListBox listBox_data;
-        private System.Windows.Forms.CheckBox checkBoxUpData;
+        private System.Windows.Forms.CheckBox checkBox_UpData1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button_Clear;
         private System.Windows.Forms.CheckBox checkBox_Logging;
+        private System.Windows.Forms.ComboBox comboBox_ConnType;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox_tableName;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox_http;
+        private System.Windows.Forms.TextBox textBox_URL;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox checkBox_UpData2;
     }
 }
 
